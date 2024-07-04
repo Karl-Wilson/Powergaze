@@ -1,2 +1,4 @@
 Added src path to tailwind config file
 Note: For tailwind classes to work properly, make sure you include component folder path in tailwind config file.
+
+added darkmode to tailwind config file
