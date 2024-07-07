@@ -9,6 +9,7 @@ type btn = {
     filled?: {bgColor: string, textColor: string},
     outline?: {borderColor: string, textColor: string},
     text?: {textColor: string},
+    class?: string
 }
 
 const Button = (props: btn) =>{
@@ -24,7 +25,7 @@ const Button = (props: btn) =>{
     }
 
         return(
-            <button className={classJoiner("h-10 rounded-full", combine(props.filled), combine(props.outline), props.text?.textColor, props.icon? "pl-4 pr-6 flex flex-row items-center" : "px-6")} 
+            <button className={classJoiner("h-10 rounded-full", combine(props.filled), combine(props.outline), props.text?.textColor, props.icon? "pl-4 pr-6 flex flex-row items-center" : "px-6", props.class)} 
             onClick={props.click} disabled={props.disabled}>
                 {props.icon && <img className="mr-2 h-6" src={props.icon}/>}
                 {props.label}
