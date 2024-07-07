@@ -20,6 +20,9 @@ const config: Config = {
           DEFAULT: "#666cff",
           dark: "#191650"
         }
+      },
+      spacing:{
+        '18': '72px'
       }
     },
   },
