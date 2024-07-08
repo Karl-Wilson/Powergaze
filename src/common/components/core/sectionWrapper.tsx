@@ -10,8 +10,8 @@ type wrapper = {
 
 const SectionWrapper = (props: wrapper) =>{
     return(
-        <section className={classJoiner("w-full", props.wrapperClass)}>
-            <div className={classJoiner(props.maxWidth, props.innerClass)}>{props.children}</div>
+        <section className={classJoiner("w-full box-border", props.wrapperClass)}>
+            <div className={classJoiner("mx-auto box-border", props.maxWidth, props.innerClass)}>{props.children}</div>
         </section>
     )
 }
