@@ -7,7 +7,7 @@ type navbar = {
 const Navbar = (props: navbar) =>{
     let value = [{name: "Home", url: "/"}, {name: "About", url: "/about"}, {name: "Contact", url: "/contact"}]
     return(
-        <Nav menu={value} class={classJoiner("flex flex-col md:flex-row items-center w-full px-4", props.class)} linkClass="py-2 md:pr-8"/>
+        <Nav menu={value} class={classJoiner("flex flex-col md:flex-row items-center w-full px-4", props.class)} linkClass="py-2 md:pr-8 hover:text-btnColor"/>
     )
 }
 

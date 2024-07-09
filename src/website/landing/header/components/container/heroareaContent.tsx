@@ -13,7 +13,7 @@ const HeroareaContent = (props: heroareaContent) =>{
                 <h2 className={classJoiner("text-3xl lg:text-4xl font-bold", montserrat.className)}>{headline}</h2>
             </div>
             <div>
-                <Button label="Learn more" class="w-full md:w-auto" filled={{bgColor: "bg-btnColor", textColor: "text-white"}}/>
+                <Button label="Learn more" class="w-full md:w-auto" filled={{bgColor: "bg-btnColor hover:bg-btnColor-dark", textColor: "text-white"}}/>
             </div>
         </div>
     )
