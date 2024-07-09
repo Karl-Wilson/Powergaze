@@ -6,7 +6,7 @@ type feature = {}
 
 const Feature = (props: feature) => {
     return(
-        <SectionWrapper maxWidth="max-w-6xl" wrapperClass="py-16">
+        <SectionWrapper maxWidth="max-w-6xl" wrapperClass="py-10 md:py-16" innerClass="px-4 xl:px-0">
             <FeatureOne/>
             <FeatureTwo/>
         </SectionWrapper>

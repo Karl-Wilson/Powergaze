@@ -8,7 +8,7 @@ type image = {
 const FeatureImage = (props:image) =>{
     return(
         <>
-            <img src={props.src} className={classJoiner("", props.class)} />
+            <img src={props.src} className={classJoiner("w-4/5 md:w-auto", props.class)} />
         </>
     )
 }

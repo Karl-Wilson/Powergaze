@@ -10,13 +10,13 @@ type featureContainer = {
 const FeatureTwoContainer = (props: featureContainer) =>{
     return(
         <Wrapper>
-            <div className="col-start-1 flex flex-col justify-center">
+            <div className="col-start-1 flex flex-col justify-center mb-7 md:mb-0">
                 <FeatureContent title="Control your Energy Consumption" 
                 body="Lorem Ipsum is simply dummy text of the printing and 
                 typesetting industry. Lorem Ipsum has been the industry's standard 
                 dummy text ever since the 1500s."/>
             </div>
-            <div className=" col-start-2 col-span-2 flex flex-row justify-end">
+            <div className="col-start-1 md:col-start-2 md:col-span-2 flex flex-row justify-end">
                 <FeatureImage src="featureTwo.png"/>     
             </div>
         </Wrapper>

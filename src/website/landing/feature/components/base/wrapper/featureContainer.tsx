@@ -6,7 +6,7 @@ type containerWrapper = {
 
 const ContainerWrapper = (props: containerWrapper) =>{
     return(
-        <div className={classJoiner("grid grid-cols-3", "text-white")}>
+        <div className={classJoiner("grid grid-cols-1 md:grid-cols-3 gap-6 xl:gap-0", "text-white")}>
             {props.children}
         </div>
     )
