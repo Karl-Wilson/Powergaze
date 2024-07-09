@@ -4,14 +4,15 @@ import { classJoiner } from "../../utils/helper"
 type nav = {
     menu: {name: string, url: string}[]
     class?: string
+    linkClass?: string
 }
 
 
 const Nav = (props: nav) =>{
     return(
-        <nav className={classJoiner("flex flex-row items-center w-full px-4", props.class)}>
+        <nav className={classJoiner(props.class)}>
             {props.menu.map(menu=>{
-                return <Link href={menu.url} key={menu.url + "" + menu.name} className="pr-2">{menu.name}</Link>
+                return <Link href={menu.url} key={menu.url + "" + menu.name} className={props.linkClass}>{menu.name}</Link>
             })}
 
         </nav>

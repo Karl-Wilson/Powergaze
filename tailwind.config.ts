@@ -19,10 +19,11 @@ const config: Config = {
           light: "#ecf1ff",
           DEFAULT: "#666cff",
           dark: "#191650"
-        }
+        },
+        'bgWebsite': '#0A072B',
       },
       spacing:{
-        '18': '72px'
+        '18': '72px',
       }
     },
   },
