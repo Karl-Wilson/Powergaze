@@ -9,7 +9,7 @@ type footer = {
 const Footer = (props: footer) =>{
     return(
         <footer>
-            <SectionWrapper maxWidth="max-w-6xl" wrapperClass="rounded-t-[42px] bg-white py-8">
+            <SectionWrapper maxWidth="max-w-6xl" wrapperClass="md:rounded-t-[42px] bg-white py-8">
                 <FooterLayout/>
             </SectionWrapper>
             

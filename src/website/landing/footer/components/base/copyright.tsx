@@ -7,7 +7,7 @@ type copyright = {
 
 const Copyright = (props:copyright) =>{
     return(
-        <p className={classJoiner("text-gray-800 font-bold", montserrat.className)}>&copy; 2024 POWERGAZE</p>
+        <p className={classJoiner("text-sm md:text-base text-gray-800 font-bold", montserrat.className)}>&copy; 2024 POWERGAZE</p>
     )
 }
 
