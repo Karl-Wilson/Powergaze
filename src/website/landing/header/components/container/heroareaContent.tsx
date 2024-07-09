@@ -8,12 +8,12 @@ type heroareaContent = {
 
 const HeroareaContent = (props: heroareaContent) =>{
     return(
-        <div className={classJoiner("mr-4 flex flex-col justify-center", props.class)}>
-            <div className="mb-11">
-                <h2 className={classJoiner("text-4xl font-bold", montserrat.className)}>{headline}</h2>
+        <div className={classJoiner("md:mr-4 flex flex-col justify-center", props.class)}>
+            <div className="mb-5 md:mb-11 text-center md:text-left">
+                <h2 className={classJoiner("text-3xl md:text-4xl font-bold", montserrat.className)}>{headline}</h2>
             </div>
-            <div className="">
-                <Button label="Learn more" filled={{bgColor: "bg-btnColor", textColor: "text-white"}}/>
+            <div>
+                <Button label="Learn more" class="w-full md:w-auto" filled={{bgColor: "bg-btnColor", textColor: "text-white"}}/>
             </div>
         </div>
     )
