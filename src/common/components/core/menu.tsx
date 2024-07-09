@@ -20,7 +20,7 @@ const Menu = (props: menu) =>{
         
     }
     return(
-        <div className={classJoiner("relative", props.class)}>
+        <div className={classJoiner(props.class)}>
             <img src={props.icon} className={classJoiner("cursor-pointer", props.iconClass)} onClick={click}/>
             <div className={classJoiner("absolute p-4 box-border drop-shadow-lg", display, props.dropdownClass)}>
                 {props.children}

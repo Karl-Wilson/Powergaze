@@ -11,7 +11,7 @@ type dropdown = {
 
 const Dropdown = (props: dropdown) =>{
     return(
-        <Menu icon="menu.png" class={props.class} iconClass="w-10 h-10" dropdownClass="top-10 right-2 px-4 py-6 bg-white w-[50vw]">
+        <Menu icon="menu.png" class={props.class} iconClass="w-10 h-10" dropdownClass="top-16 right-0 px-4 py-6 bg-white w-[100%] border border-neutral-200">
             <Navbar/>
             <NavButtons/>
         </Menu>      
