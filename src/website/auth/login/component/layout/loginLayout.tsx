@@ -15,9 +15,7 @@ const LoginLayout = (props: loginLayout) =>{
                 <Header title="Sign in" class="col-start-1"/>
             </HeaderLayoutWrapper>
             <FormLayoutWrapper>
-                <div className="col-start-2 col-span-2">
-                    <Form/>
-                </div>
+                <Form class="col-start-2 col-span-2"/>
             </FormLayoutWrapper>
         </LayoutWrapper>
     )
