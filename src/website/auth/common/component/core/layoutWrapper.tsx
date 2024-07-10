@@ -4,7 +4,7 @@ type layout = {
 
 const LayoutWrapper = (props: layout) =>{
     return(
-        <div className="md:rounded-[42px] bg-white px-14 box-border grid grid-cols-1 md:grid-cols-3">
+        <div className="md:rounded-[42px] bg-white p-14 box-border">
             {props.children}
         </div>
     )
