@@ -10,8 +10,8 @@ type formButtons = {
 
 const FormButtons = (props: formButtons) =>{
     return(
-        <div className={classJoiner("flex flex-row items-center justify-between w-full", props.class)}>
-            <Link href="/signup" className="font-bold">Create Account</Link>
+        <div className={classJoiner("flex flex-col md:flex-row items-center md:justify-between w-full", props.class)}>
+            <Link href="/signup" className="font-bold mb-6 md:mb-0">Create Account</Link>
             <Button label="Next" 
                 filled={{bgColor: "bg-btnColor hover:bg-btnColor-dark", textColor: "text-white"}} 
                 class="font-bold w-full md:w-auto" click={props.submitAccount}/>

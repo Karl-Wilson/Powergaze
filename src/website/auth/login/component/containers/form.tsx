@@ -12,7 +12,7 @@ const Form  = (props: form) =>{
     const theme = {borderColor: "border-neutral-200", textColor: "text-neutral-400", bgColor: "bg-white",  borderWidth: "border"}
     return(
         <div className={classJoiner("flex flex-row justify-center items-center", props.class)}>
-            <form className="grid grid-cols-1 grid-rows-3 w-full md:w-80">
+            <form className="grid grid-cols-1 grid-rows-3 gap-4 w-full md:w-80 ">
             <div className="row-start-1 row-span-2">
                 <Input  name="Email" type="text" label="Email" inputType="default" theme={theme} class="mb-4"/>
                 <Input  name="Passowrd" type="password" label="Password" inputType="default" theme={theme}  class="mb-4"/>
