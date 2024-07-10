@@ -13,7 +13,7 @@ const Header = (props: header) =>{
         <div className={classJoiner("flex flex-col", props.class)}>
             <Logo logo="logo.png" class="w-[178px] h-auto"/>
             <div>
-                <h2 className={classJoiner("text-4xl",montserrat.className, props.titleClass)}>{props.title}</h2>
+                <h2 className={classJoiner("text-4xl pl-4",montserrat.className, props.titleClass)}>{props.title}</h2>
             </div>
         </div>
     )

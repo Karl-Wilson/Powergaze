@@ -7,7 +7,7 @@ type login = {
 
 const Login = (props: login) =>{
     return(
-        <SectionWrapper maxWidth="max-w-[987px]" wrapperClass="py-10 md:py-16" innerClass="px-4 xl:px-0">
+        <SectionWrapper maxWidth="max-w-[987px]" wrapperClass="h-screen flex flex-col justify-center" innerClass="px-4 xl:px-0">
             <LoginLayout/>
         </SectionWrapper>
     )
