@@ -5,7 +5,7 @@ type login = {
 
 }
 
-const Login = (props: login) =>{
+const LoginPage = (props: login) =>{
     return(
         <SectionWrapper maxWidth="max-w-[987px]" wrapperClass="h-screen flex flex-col justify-center" innerClass="xl:px-0">
             <LoginLayout/>
@@ -13,4 +13,4 @@ const Login = (props: login) =>{
     )
 }
 
-export default Login
+export default LoginPage

@@ -5,7 +5,7 @@ type signup = {
 
 }
 
-const Signup = (props: signup) =>{
+const SignupPage = (props: signup) =>{
     return(
         <SectionWrapper maxWidth="max-w-[987px]" wrapperClass="h-screen flex flex-col justify-center" innerClass="xl:px-0">
             <SignupLayout/>
@@ -13,4 +13,4 @@ const Signup = (props: signup) =>{
     )
 }
 
-export default Signup
+export default SignupPage
