@@ -6,7 +6,7 @@ type logo = {
 }
 const Logo = (props: logo) =>{
     return(
-        <div className={classJoiner("px-4 box-border flex flex-row items-center", props.class)}>
+        <div className={classJoiner("box-border flex flex-row items-center", props.class)}>
             <img src={props.logo}/>
         </div>
     )
