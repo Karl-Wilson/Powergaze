@@ -1,5 +1,6 @@
 import Logo from "@/src/common/components/core/logo";
 import { classJoiner } from "@/src/common/utils/helper";
+import Link from "next/link";
 
 type powerGaze = {
     class?: string
@@ -7,7 +8,7 @@ type powerGaze = {
 const PowerGazeLogo = (props: powerGaze) =>{
     return(
         <div className={classJoiner("flex flex-row items-center", props.class)}>
-            <Logo logo="logo.png"/>
+            <Link href="/"><Logo logo="logo.png"/></Link>
         </div>
     )
 }
