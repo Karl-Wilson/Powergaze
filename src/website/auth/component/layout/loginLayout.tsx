@@ -1,9 +1,9 @@
-import Header from "../../../common/component/container/header";
-import Form from "../../../common/component/core/form";
-import FormLayoutWrapper from "../../../common/component/core/formLayoutWrapper";
-import HeaderLayoutWrapper from "../../../common/component/core/headerLayoutWrapper";
-import LayoutWrapper from "../../../common/component/core/layoutWrapper";
-import InputGroup from "../../../common/component/container/inputGroup";
+import Header from "../container/header";
+import Form from "../core/form";
+import FormLayoutWrapper from "../core/formLayoutWrapper";
+import HeaderLayoutWrapper from "../core/headerLayoutWrapper";
+import LayoutWrapper from "../core/layoutWrapper";
+import InputGroup from "../container/inputGroup";
 
 type loginLayout = {
 
