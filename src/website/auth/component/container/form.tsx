@@ -1,6 +1,6 @@
 import Input from "@/src/common/components/core/form/input"
 import Link from "next/link"
-import FormButtons from "../container/formButtons"
+import FormButtons from "./formButtons"
 import { montserrat } from "@/src/common/utils/fonts"
 import { classJoiner } from "@/src/common/utils/helper"
 

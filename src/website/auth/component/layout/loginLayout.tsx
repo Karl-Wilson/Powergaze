@@ -1,5 +1,5 @@
 import Header from "../container/header";
-import Form from "../core/form";
+import Form from "../container/form";
 import FormLayoutWrapper from "../core/formLayoutWrapper";
 import HeaderLayoutWrapper from "../core/headerLayoutWrapper";
 import LayoutWrapper from "../core/layoutWrapper";
