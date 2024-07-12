@@ -19,7 +19,7 @@ const InputGroup = (props:inputGroup) =>{
             <Input  name="Passowrd" type="password" label="Password" inputType="default" theme={theme}  class="mb-4"/>
             {!isLoginPage() && <Input  name="Passowrd" type="password" label="Conirm Password" inputType="default" theme={theme}  class="mb-4"/>
             }
-            {isLoginPage() && <Link href="/reset" className={classJoiner("text-sm", montserrat.className)}>Forget Email or Password</Link>}
+            {isLoginPage() && <Link href="/reset" className={classJoiner("text-sm hover:text-btnColor", montserrat.className)}>Forget Email or Password</Link>}
         </>
     )
 }
