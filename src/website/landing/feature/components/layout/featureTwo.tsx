@@ -10,8 +10,8 @@ type featureTwo = {
 const FeatureTwo = (props: featureTwo) => {
     const layout = useRef(null)
     const scrollAction = ():void => {
-          document.getElementById("featureTwoContent")?.classList.add("animate-[staticEaseIn_1s_ease-in-out_forwards]")
-          document.getElementById("featureTwoImage")?.classList.add("animate-[rightEaseIn_1s_ease-in-out_0.5s_forwards]")
+          document.getElementById("featureTwoContent")?.classList.add("animate-staticEaseIn")
+          document.getElementById("featureTwoImage")?.classList.add("animate-rightEaseIn")
     }
     useScrollAnimate(layout, scrollAction, true)
     
