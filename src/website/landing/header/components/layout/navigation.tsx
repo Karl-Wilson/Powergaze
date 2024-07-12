@@ -9,7 +9,7 @@ const Navigation = () =>{
             <PowerGazeLogo class="col-start-1 md:col-span-3"/>
             <Navbar class="hidden md:flex"/>
             <NavButtons class="hidden md:flex col-start-10 col-span-3"/>
-            <Dropdown class="flex flex-row justify-end md:hidden col-start-2"/>
+            <Dropdown class="flex flex-row justify-end md:hidden col-start-2 z-10"/>
         </div>
     )
 }
