@@ -14,10 +14,10 @@ const FeatureTwoContainer = (props: featureContainer) =>{
                 <FeatureContent title="Control your Energy Consumption" 
                 body="Lorem Ipsum is simply dummy text of the printing and 
                 typesetting industry. Lorem Ipsum has been the industry's standard 
-                dummy text ever since the 1500s."/>
+                dummy text ever since the 1500s." id="featureTwoContent" class="opacity-0"/>
             </div>
             <div className="col-start-1 md:col-start-2 md:col-span-2 flex flex-row justify-end">
-                <FeatureImage src="featureTwo.png"/>     
+                <FeatureImage src="featureTwo.png" id="featureTwoImage" class="opacity-0"/>     
             </div>
         </Wrapper>
     )

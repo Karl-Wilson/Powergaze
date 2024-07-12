@@ -5,11 +5,12 @@ type content = {
     title: string,
     body: string,
     class?: string
+    id?: string
 }
 
 const FeatureContent = (props:content) =>{
     return(
-        <div className={classJoiner("w-3/4 md:w-auto", props.class)}>
+        <div className={classJoiner("w-3/4 md:w-auto", props.class)} id={props.id}>
             <h2 className={classJoiner("font-bold text-2xl lg:text-3xl mb-4", montserrat.className)}>{props.title}</h2>
             <p className={classJoiner("text-base lg:text-lg", montserrat.className)}>{props.body}</p>
         </div>
