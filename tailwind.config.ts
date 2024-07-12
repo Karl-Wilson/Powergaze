@@ -24,6 +24,20 @@ const config: Config = {
       },
       spacing:{
         '18': '72px',
+      },
+      keyframes: {
+        leftEaseIn: {
+          '0%': {opacity: "0", transform: 'translateX(-100px)'},
+          '100%': {opacity: "1", transform: 'translateX(0px)'},
+        },
+        rightEaseIn: {
+          '0%': {opacity: "0", transform: 'translateX(100px)'},
+          '100%': {opacity: "1", transform: 'translateX(0px)'},
+        }, 
+        staticEaseIn: {
+          '0%': {opacity: "0"},
+          '100%': {opacity: "1"},
+        }
       }
     },
   },
