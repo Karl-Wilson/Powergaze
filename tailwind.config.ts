@@ -38,6 +38,11 @@ const config: Config = {
           '0%': {opacity: "0"},
           '100%': {opacity: "1"},
         }
+      },
+      animation: {
+        staticEaseIn : "staticEaseIn 1s ease-in-out forwards",
+        rightEaseIn : 'rightEaseIn 1s ease-in-out 0.5s forwards',
+        leftEaseIn : 'leftEaseIn 1s ease-in-out 0.5s forwards'
       }
     },
   },
