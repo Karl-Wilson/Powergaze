@@ -17,7 +17,7 @@ const FeatureTwoContainer = (props: featureContainer) =>{
                 dummy text ever since the 1500s." id="featureTwoContent" class="opacity-0"/>
             </div>
             <div className="col-start-1 md:col-start-2 md:col-span-2 flex flex-row justify-end">
-                <FeatureImage src="featureTwo.png" id="featureTwoImage" class="opacity-0"/>     
+                <FeatureImage src="featureTwo.png" id="featureTwoImage" class="opacity-0 translate-x-[100px]"/>     
             </div>
         </Wrapper>
     )

@@ -11,7 +11,7 @@ const FeatureOneContainer = (props: featureContainer) =>{
     return(
         <Wrapper>
             <div className="col-start-1 md:col-span-2 row-start-2 md:row-start-1">
-                    <FeatureImage src="featureOne.png" id="featureOneImage" class="opacity-0"/>     
+                    <FeatureImage src="featureOne.png" id="featureOneImage" class="opacity-0 translate-x-[-100px]"/>     
                 </div>
                 <div className="col-start-1 md:col-start-3 row-start-1 flex flex-col justify-center items-end md:items-center xl:w-[325px] mb-7 md:mb-0">
                     <FeatureContent title="Monitor your Energy Consumption" 
