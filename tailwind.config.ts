@@ -21,6 +21,9 @@ const config: Config = {
           dark: "#191650"
         },
         'bgWebsite': '#0A072B',
+        'dashboard': {
+          primary: '#1C1A3F'
+        }
       },
       spacing:{
         '18': '72px',
