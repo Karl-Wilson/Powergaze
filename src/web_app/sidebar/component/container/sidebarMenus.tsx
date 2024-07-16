@@ -34,7 +34,7 @@ const SidebarMenus = (props: sidebarMenus) =>{
     }
 
     return(
-        <div className="hover:overflow-auto h-[calc(100vh-80px)] box-border px-3 py-6">
+        <div className="overflow-auto h-[calc(100vh-80px)] box-border px-3 py-6">
             <div className={classJoiner("flex flex-col h-[2000px]", props.class)}>
                 {menus.map(menu=>{
                     if(page == menu.name){
