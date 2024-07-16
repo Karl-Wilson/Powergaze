@@ -1,3 +1,4 @@
+"use client"
 import NavLayout from "../component/layout/navLayout"
 
 const Navigation = () =>{

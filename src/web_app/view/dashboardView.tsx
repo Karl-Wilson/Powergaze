@@ -2,13 +2,16 @@ import Main from "../main/view/main"
 import Navigation from "../navigation/view/Navigation"
 import Sidebar from "../sidebar/view/sidebar"
 
-const DashboardView = () =>{
+type dashboardView = {
+    children: React.ReactNode
+}
+const DashboardView = (props:dashboardView) =>{
     return(
         <div className="max-w-[1700px] h-screen w-screen flex flex-row">
             <Sidebar/>
             <div className="w-full h-screen flex flex-col">
                 <Navigation/>
-                <Main/>
+                <Main>{props.children}</Main>
             </div>
         </div>
     )

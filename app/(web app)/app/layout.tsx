@@ -1,11 +1,13 @@
+import DashboardView from "@/src/web_app/view/dashboardView"
+
 type dashLayout = {
     children: React.ReactNode
 }
 const DashboardLayout = (props:dashLayout) =>{
     return(
-        <div className="bg-neutral-900">
+        <DashboardView>
             {props.children}
-        </div>
+        </DashboardView>
     )
 }
 export default DashboardLayout

@@ -1,3 +1,4 @@
+"use client"
 import SidebarLayout from "../component/layout/sidebarLayout"
 
 const Sidebar = () =>{
