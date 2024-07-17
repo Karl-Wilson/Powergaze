@@ -8,36 +8,27 @@ type sidebarMenus = {
     class?: string
 }
 const SidebarMenus = (props: sidebarMenus) =>{
+    const dashboardPath = "/app"
     const pathname = usePathname()
-    const [page, setPage] = useState("Dashboard")
-    useEffect(() => {
-        if(!isPageSameAsPAthname()){
-            activeMenu(pathname)
-        }
-    }, [pathname])
 
+    useEffect(() => {
+   
+    }, [pathname])
+    
     const menus = [
-        {name: "Dashboard", icon: "", url: "/"},
-        {name: "Appliances", icon: "", url: "/"},
-        {name: "Analytics", icon: "", url: "/"},
-        {name: "Energy Plan", icon: "", url: "/"},
+        {name: "Dashboard", icon: "", url: dashboardPath},
+        {name: "Appliances", icon: "", url: dashboardPath + "/appliance"},
+        {name: "Analytics", icon: "", url: dashboardPath + "/analytics"},
+        {name: "Energy Plan", icon: "", url: dashboardPath + "/plan"},
     
     ]
-    const activeMenu = (path: string):void =>{
-        let page = path.split("/")
-        setPage(page[page.length - 1])
-    }
-    const isPageSameAsPAthname = () =>{
-        let current = pathname.split("/")
-        if(page == current[current.length - 1]) return true
-        return false
-    }
+
 
     return(
         <div className="overflow-auto h-[calc(100vh-80px)] box-border px-3 py-6">
             <div className={classJoiner("flex flex-col h-[2000px]", props.class)}>
                 {menus.map(menu=>{
-                    if(page == menu.name){
+                    if(pathname == menu.url){
                     return <SidebarMenu title={menu.name} icon={menu.icon} 
                         url={menu.url} active textClass={classJoiner(montserrat.className, "font-bold")} 
                         key={menu.name+" - " +menu.url}/> 
