@@ -1,9 +1,12 @@
+import { classJoiner } from "@/src/common/utils/helper"
 import SidebarHeader from "../container/sidebarHeader"
 import SidebarMenus from "../container/sidebarMenus"
-
-const SidebarLayout = () =>{
+type layout ={
+    class?: string
+}
+const SidebarLayout = (props: layout) =>{
     return(
-        <div className="w-full flex flex-col h-full">
+        <div className={classJoiner("w-full flex flex-col h-full", props.class)}>
             <SidebarHeader/>
             <SidebarMenus/>
         </div>

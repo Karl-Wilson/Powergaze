@@ -3,6 +3,9 @@ import SidebarMenu from "../core/sidebarMenu"
 import { montserrat } from "@/src/common/utils/fonts"
 import { usePathname, useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux"
+import { RootState } from "@/src/web_app/common/store/store"
+import useSidemenu from "@/src/web_app/common/hooks/sidemenu"
 
 type sidebarMenus = {
     class?: string
@@ -10,6 +13,7 @@ type sidebarMenus = {
 const SidebarMenus = (props: sidebarMenus) =>{
     const dashboardPath = "/app"
     const pathname = usePathname()
+    const {isMenuVisible} = useSidemenu()
 
     useEffect(() => {
    
@@ -25,7 +29,7 @@ const SidebarMenus = (props: sidebarMenus) =>{
 
 
     return(
-        <div className="overflow-auto h-[calc(100vh-80px)] box-border px-3 py-6">
+        <div className={classJoiner("overflow-auto h-[calc(100vh-80px)] box-border transition-all py-6 md:px-3", isMenuVisible? "px-3":"px-0")}>
             <div className={classJoiner("flex flex-col h-[2000px]", props.class)}>
                 {menus.map(menu=>{
                     if(pathname == menu.url){
