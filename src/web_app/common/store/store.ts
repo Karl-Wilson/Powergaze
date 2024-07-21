@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import appReducer from "./reducer";
+import appReducer from "./reducer/reducer";
+import dashboardReducer from "./reducer/dashboardReducer";
 
 export const store = configureStore({
     reducer: {
-      app: appReducer
+      app: appReducer,
+      dashboard: dashboardReducer
     },
   })
 

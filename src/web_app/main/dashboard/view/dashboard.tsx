@@ -1,7 +1,9 @@
+import ConsumptionLayout from "../consumptionDisplay/component/layout/consumptionLayout"
+
 const Dashboard = () =>{
     return(
         <div>
-            Dashboard
+            <ConsumptionLayout/>
         </div>
     )
 }
