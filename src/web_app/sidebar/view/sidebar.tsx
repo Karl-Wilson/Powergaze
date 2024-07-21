@@ -4,7 +4,7 @@ import SidebarLayout from "../component/layout/sidebarLayout"
 import { useSelector, useDispatch } from "react-redux"
 import { RootState } from "../../common/store/store"
 import { classJoiner } from "@/src/common/utils/helper"
-import { setMenuVisibility } from "../../common/store/reducer"
+import { setMenuVisibility } from "../../common/store/reducer/reducer"
 import useSidemenu from "../../common/hooks/sidemenu"
 
 const Sidebar = () =>{
