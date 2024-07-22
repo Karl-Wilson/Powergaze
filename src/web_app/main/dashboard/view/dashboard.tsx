@@ -2,8 +2,8 @@ import ConsumptionLayout from "../consumptionDisplay/component/layout/consumptio
 
 const Dashboard = () =>{
     return(
-        <div>
-            <ConsumptionLayout/>
+        <div className="grid grid-cols-4 md:grid-cols-12">
+            <ConsumptionLayout class="col-start-1 col-span-4 md:col-span-12"/>
         </div>
     )
 }
