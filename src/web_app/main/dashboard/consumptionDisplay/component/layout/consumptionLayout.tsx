@@ -5,7 +5,10 @@ import TabContainer from "../container/tabContainer"
 import { useState } from "react"
 import { RootState } from "@/src/web_app/common/store/store"
 
-const ConsumptionLayout = () =>{
+type layout = {
+    class?: string
+}
+const ConsumptionLayout = (props: layout) =>{
     const consumptionData = useSelector((state:RootState)=>state.dashboard.consumption)
     let tabs = ["today", "Yesterday", "Total"]
     let [labelClicked, setLabelClicked] = useState(tabs[0])
@@ -25,7 +28,7 @@ const ConsumptionLayout = () =>{
 
 
     return(
-        <DashboardCard>
+        <DashboardCard class={props.class}>
             <TabContainer click={click} labelClicked={labelClicked} tabs={tabs}/>
             <ConsumptionContainer data={data}/>
         </DashboardCard>
