@@ -26,8 +26,20 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+select {
+  appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("../public/arrowDown.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  cursor: pointer;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
