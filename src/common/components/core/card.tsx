@@ -8,11 +8,12 @@ type card = {
     shadow?: string
     filled?: string,
     outline?: string
+    class?: string
 
 }
 const Card = (props: card) =>{
     return(
-        <div className={classJoiner("rounded-xl p-4 box-border", props.filled, props.outline,  props.shadow, props.width)}>
+        <div className={classJoiner("rounded-xl p-4 box-border", props.filled, props.outline,  props.shadow, props.width, props.class)}>
             {props.children}
         </div>
     )
