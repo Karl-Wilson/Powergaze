@@ -19,8 +19,8 @@ type body = {
 export const CardHeader = (props: header) =>{
     return(
         <div className={classJoiner(props.class, "w-full flex flex-row items-center")}>
-            <div className="w-full flex flex-row items-center"><p className={classJoiner(lato.className, "font-bold text-2xl")}>{props.title}</p></div>
-            <div className="flex flex-row justify-end items-center w-full">{props.children}</div>
+            <div className="w-full flex flex-row items-center"><p className={classJoiner(lato.className, "font-bold text-xl")}>{props.title}</p></div>
+            {props.children && <div className="flex flex-row justify-end items-center w-full">{props.children}</div>}
         </div>
     )
 }
