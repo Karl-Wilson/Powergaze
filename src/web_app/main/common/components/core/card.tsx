@@ -1,9 +1,35 @@
 import { ReactNode } from "react"
 import Card from "@/src/common/components/core/card"
+import { classJoiner } from "@/src/common/utils/helper"
+import { lato } from "@/src/common/utils/fonts"
 
 type card = {
     children: ReactNode,
     class?: string
+}
+type header = {
+    title: string
+    children?: React.ReactNode
+    class?: string
+}
+type body = {
+    children: React.ReactNode
+    class?:string
+}
+export const CardHeader = (props: header) =>{
+    return(
+        <div className={classJoiner(props.class, "w-full flex flex-row items-center")}>
+            <div className="w-full flex flex-row items-center"><p className={classJoiner(lato.className, "font-bold text-2xl")}>{props.title}</p></div>
+            <div className="flex flex-row justify-end items-center w-full">{props.children}</div>
+        </div>
+    )
+}
+export const CardBody = (props:body) =>{
+    return(
+        <div className={classJoiner(props.class, "w-full h-full")}>
+            {props.children}
+        </div>
+    )
 }
 const DashboardCard = (props: card) =>{
     return(
