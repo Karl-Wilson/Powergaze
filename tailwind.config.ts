@@ -22,7 +22,8 @@ const config: Config = {
         },
         'bgWebsite': '#0A072B',
         'dashboard': {
-          primary: '#1C1A3F'
+          primary: '#1C1A3F',
+          green: '#2BC24A'
         }
       },
       spacing:{
