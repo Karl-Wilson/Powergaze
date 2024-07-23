@@ -35,3 +35,15 @@ export function onscroll (element:HTMLElement, action:()=>void, visibility: bool
     const event = new Event(eventName);
     window.dispatchEvent(event)
   }
+
+  export const currencyConverter = (finalCurrency: string, initialCurrency: string, initialAmount: number, fx: {[key: string]: {rate: number, symbol: string}}) =>{
+    //rates should be initial currency conversion rates
+    let exchange = initialAmount;    
+            if(initialCurrency != finalCurrency){
+                //convert initial currency to dollars
+                //convert to final currency
+                    exchange = (initialAmount/fx[initialCurrency].rate)* fx[finalCurrency].rate
+            }
+
+            return {exchange: exchange, symbol: fx[finalCurrency].symbol}
+  }
