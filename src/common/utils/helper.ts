@@ -46,7 +46,7 @@ export function onscroll (element:HTMLElement, action:()=>void, visibility: bool
                     exchange = (initialAmount/fx[initialCurrency].rate)* fx[finalCurrency].rate
             }
 
-            return {exchange: exchange, symbol: fx[finalCurrency].symbol}
+            return exchange.toFixed(2)
     } catch (error) {
         console.log(error, ": currencyConverter function")
     }
