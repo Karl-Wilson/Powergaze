@@ -7,7 +7,14 @@ const initialState = {
     total: {energy: 54.5, cost: 9.5, status: "Good"}},
     defaultCurrency: "USD",
     exchangeRate: {NGN: {rate: 1600, symbol: "N"}, GBP: {rate: 1.28, symbol: "GBP"},  USD: {rate: 1, symbol: "$"}},
-    dashboardCurrency: "USD"
+    dashboardCurrency: "USD",
+    applianceStatusColName: ["Name", "Status", "Usage", "Cost"],
+    applianceStatus: [
+        {name: "Refrigerator", status: true, usage: 2.3, cost: 1.4},
+        {name: "Television and video home studio set", status: true, usage: 2.3, cost: 1.4},
+        {name: "Television", status: true, usage: 2.3, cost: 1.4},
+        {name: "Television", status: true, usage: 2.3, cost: 1.4}
+    ]
 }
 
 export const dashboard = createSlice({
@@ -25,12 +32,18 @@ export const dashboard = createSlice({
     },
     setDashboardCurrency: (state, action) =>{
       state.dashboardCurrency = action.payload
+    },
+    setApplianceStatusColName: (state, action) =>{
+      state.applianceStatusColName = action.payload
+    },
+    setApplianceStatus: (state, action) =>{
+      state.applianceStatus = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setConsumption, setDefaultCurrency, setExchangeRate, setDashboardCurrency } = dashboard.actions
+export const { setConsumption, setDefaultCurrency, setExchangeRate, setDashboardCurrency, setApplianceStatusColName, setApplianceStatus } = dashboard.actions
 
 export default dashboard.reducer
 
