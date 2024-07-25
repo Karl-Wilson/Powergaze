@@ -24,7 +24,8 @@ const config: Config = {
         'dashboard': {
           primary: '#1C1A3F',
           green: '#2BC24A',
-          red: "#FF6E91"
+          red: "#FF6E91",
+          purple: "#8B3DB4"
         }
       },
       spacing:{
