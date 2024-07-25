@@ -26,7 +26,7 @@ export const CardHeader = (props: header) =>{
 }
 export const CardBody = (props:body) =>{
     return(
-        <div className={classJoiner(props.class, "w-full h-full")}>
+        <div className={classJoiner(props.class, "w-full")}>
             {props.children}
         </div>
     )
