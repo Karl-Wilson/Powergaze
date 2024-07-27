@@ -11,8 +11,8 @@ const MenuLogo = () =>{
     const {click} = useSidemenu()
     return(
         <div className="md:hidden flex flex-row items-center">
-            <Menu icon="menu.png" click={click} class="mr-6"/>
-            <Link href="/"><Logo logo="logo.png" class="w-36 h-auto"/></Link>
+            <Menu icon="../menu.png" click={click} class="mr-6"/>
+            <Link href="/"><Logo logo="../logo.png" class="w-36 h-auto"/></Link>
         </div>
     )
 }

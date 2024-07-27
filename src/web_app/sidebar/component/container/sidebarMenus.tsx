@@ -20,10 +20,10 @@ const SidebarMenus = (props: sidebarMenus) =>{
     }, [pathname])
     
     const menus = [
-        {name: "Dashboard", icon: "", url: dashboardPath},
-        {name: "Appliances", icon: "", url: dashboardPath + "/appliance"},
-        {name: "Analytics", icon: "", url: dashboardPath + "/analytics"},
-        {name: "Energy Plan", icon: "", url: dashboardPath + "/plan"},
+        {name: "Dashboard", icon: "../dashboard.svg", url: dashboardPath},
+        {name: "Appliances", icon: "../devices.svg", url: dashboardPath + "/appliance"},
+        {name: "Analytics", icon: "../bar_chart.svg", url: dashboardPath + "/analytics"},
+        {name: "Energy Plan", icon: "../battery_charging.svg", url: dashboardPath + "/plan"},
     
     ]
 
