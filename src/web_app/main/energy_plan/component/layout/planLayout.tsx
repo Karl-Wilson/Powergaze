@@ -4,8 +4,9 @@ import PlanContainer from "../container/planContainer"
 type layout = {
     class?:string
 }
+type data = {name: string, isActive: boolean}[] | []
 const PlanLayout = (props:layout) =>{
-    let data = [
+    let data:data = [
         {name: "Day Plan", isActive: true}, 
         {name: "Night Plan", isActive: false},
         {name: "Daysaver", isActive: false},
