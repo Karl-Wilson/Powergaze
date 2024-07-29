@@ -53,6 +53,7 @@ type input = {
     placeholder?: string,
     clickIcon?: MouseEventHandler,
     class?: string
+    children?: React.ReactNode
 
 }
 
@@ -105,16 +106,18 @@ const Input = (props: input) =>{
         icon={props.icon} clickIcon={props.clickIcon} 
         theme={props.theme} class={props.class} visibility={visibility} passIcon={passIcon}>
             <input placeholder={props.placeholder} className={inputDefaultClass} 
-            name={props.name} type={type} onChange={change}/>
+            name={props.name} type={type} onChange={change} ref={inputForm}/>
+            {props.children}
         </MyFormElement>
         )
     }
     return(
         <MyFormElement labelRef={label} name={props.name} label={props.label} 
         type={type} passwordSwitch={passowrdVisibility} labelPos={false} 
-        errorMsg={props.errorMsg} theme={props.theme} class={props.class} visibility={visibility} passIcon={passIcon}>
+        errorMsg={props.errorMsg} icon={props.icon} theme={props.theme} class={props.class} visibility={visibility} passIcon={passIcon}>
             <input ref={inputForm} className={inputDefaultClass} name={props.name} 
             type={type} onFocus={focus} onBlur={blur} onChange={change}/>
+            {props.children}
         </MyFormElement>
     )
     
@@ -128,10 +131,11 @@ type selectForm = {
     errorMsg?: string,
     placeholder?: string,
     values: any[],
+    class? : string
 }
 export const SelectForm = (props: selectForm) =>{
     return(
-        <MyFormElement name={props.name} label={props.label} type={props.type} errorMsg={props.errorMsg} theme={props.theme} labelPos>
+        <MyFormElement name={props.name} label={props.label} type={props.type} errorMsg={props.errorMsg} theme={props.theme} labelPos class={props.class}>
             <select className={inputDefaultClass} name={props.name}>
                 {props.values.map(item=>{
                     let counter: number = Math.random() * Math.random()
