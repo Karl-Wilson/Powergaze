@@ -4,7 +4,7 @@ import { classJoiner } from "@/src/common/utils/helper"
 type consumption = {
     title: string
     icon: string
-    value: string | number
+    value: string | number | undefined
     unit?: string
     class?: string
     unitClass?: string
