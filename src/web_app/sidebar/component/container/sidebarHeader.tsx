@@ -8,7 +8,7 @@ const SidebarHeader = () =>{
     const {isMenuVisible} = useSidemenu()
     return(
         <div className={classJoiner("flex flex-row items-center justify-center w-full h-20 box-border border-b border-btnColor border-solid transition-all md:p-3", isMenuVisible? "p-3" : "p-0")}>
-            <Logo logo="../logo.png" class="w-36 h-auto"/>
+            <Logo logo="../dash_logo.png" class="w-36 h-auto"/>
         </div>
     )
 }
