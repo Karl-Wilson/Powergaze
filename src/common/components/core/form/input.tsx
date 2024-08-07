@@ -1,5 +1,5 @@
 "use client"
-import { FocusEventHandler, MouseEventHandler, ReactNode, useRef, useState } from "react"
+import { EventHandler, FocusEventHandler, MouseEventHandler, ReactNode, useRef, useState } from "react"
 import { classJoiner } from "@/src/common/utils/helper"
 
 let inputDefaultClass: string = "top-0 h-full w-full px-4 py-4 z-10 bg-transparent outline-none box-border"
@@ -26,7 +26,7 @@ type myFormElement = {
 const MyFormElement = (props: myFormElement) =>{
         return(
             <div className={props.class}>
-                <div className={classJoiner("h-14 relative flex flex-row items-center box-border rounded-xl w-full", props.theme?.bgColor, props.theme?.borderWidth)} >
+                <div className={classJoiner("h-14 relative flex flex-row items-center box-border rounded-xl w-full", props.theme?.bgColor, props.theme?.borderWidth, props.errorMsg? "border-rose-300":"")} >
                     {props.icon && <img onClick={props.clickIcon} className="ml-3 h-6" src={props.icon}/>}
                     {props.children}
                     <label ref={props.labelRef} 
@@ -35,7 +35,7 @@ const MyFormElement = (props: myFormElement) =>{
                     </label>
                     {props.label == "Password" && <img className={classJoiner("mr-3 cursor-pointer", props.passIcon)} src={props.visibility? "visibility.svg" : "visibility_off.svg"} onClick={props.passwordSwitch}/>}
                 </div>
-                {props.errorMsg && <div className="w-full px-4 mt-1 flex flex-row"><img src="images/f.jpg" className="mr-4 h-6"/>{props.errorMsg}</div>}
+                {/* {props.errorMsg && <div className="w-full px-4 mt-1 flex flex-row"><img src="images/f.jpg" className="mr-4 h-6"/>{props.errorMsg}</div>} */}
             </div>
         )
     
@@ -54,6 +54,7 @@ type input = {
     clickIcon?: MouseEventHandler,
     class?: string
     children?: React.ReactNode
+    change?: ()=>void
 
 }
 
@@ -71,6 +72,9 @@ const Input = (props: input) =>{
             setPassIcon("hidden")
         }else{
             setPassIcon("block")
+        }
+        if(props.change != undefined){
+            props.change()
         }
     }
 
