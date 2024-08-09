@@ -1,21 +1,22 @@
 import { classJoiner } from "@/src/common/utils/helper"
 import PlanContainer from "../container/planContainer"
+import { useSelector } from "react-redux"
+import { RootState } from "@/src/web_app/common/store/store"
+import DataState from "../../../common/components/core/dataState"
 
 type layout = {
     class?:string
 }
-type data = {name: string, isActive: boolean}[] | []
+
 const PlanLayout = (props:layout) =>{
-    let data:data = [
-        {name: "Day Plan", isActive: true}, 
-        {name: "Night Plan", isActive: false},
-        {name: "Daysaver", isActive: false},
-     ]
+    let data:[] | {name?: string, isActive?: boolean}[] = useSelector((state: RootState)=>state.dashboard.energy_plan)
     return(
         <div className={classJoiner(props.class, "grid grid-cols-1 md:grid-cols-3 gap-6")}>
-            {data.map(plan=>{
-                return <PlanContainer title={plan.name} isActive={plan.isActive} key={plan.name+plan.isActive}/>
-            })}
+            <DataState data={data}>
+                {data.map(plan=>{
+                        return <PlanContainer title={plan.name? plan.name: ""} isActive={plan.isActive? plan.isActive : false} key={plan.name? plan.name+plan.isActive : ""}/>
+                })}
+            </DataState>
         </div>
     )
 }
