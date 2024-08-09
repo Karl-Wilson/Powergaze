@@ -3,6 +3,7 @@ import DashboardCard, { CardBody, CardHeader } from "@/src/web_app/main/common/c
 import StatusTable from "../container/statusTable"
 import { useSelector } from "react-redux"
 import { RootState } from "@/src/web_app/common/store/store"
+import DataState from "@/src/web_app/main/common/components/core/dataState"
 
 type status = {
     class?: string
@@ -15,7 +16,9 @@ const ApplianceStatus = (props:status) =>{
         <DashboardCard class={classJoiner(props.class)}>
             <CardHeader title="Appliance Usage"/>
             <CardBody>
-                <StatusTable columns={columns} list={data}/>
+                <DataState data={data}>
+                    <StatusTable columns={columns} list={data}/>
+                </DataState>
             </CardBody>
         </DashboardCard>
     )
