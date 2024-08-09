@@ -12,17 +12,17 @@ const ConsumptionLayout = (props: layout) =>{
     const consumptionData = useSelector((state:RootState)=>state.dashboard.consumption)
     let tabs = ["Today", "Yesterday", "Total"]
     let [labelClicked, setLabelClicked] = useState(tabs[0])
-    let [data, setData] = useState({})
+    let [data, setData] = useState(consumptionData[labelClicked as keyof typeof consumptionData])
 
 
     const click = (label:string) =>{
         setLabelClicked(label)
         if(label == tabs[0]){
-            setData(consumptionData.today)
+            setData(consumptionData.Today)
         }else if(label == tabs[1]){
-            setData(consumptionData.yesterday)
+            setData(consumptionData.Yesterday)
         }else{
-            setData(consumptionData.total)
+            setData(consumptionData.Total)
         }
     }
 
