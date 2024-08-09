@@ -14,7 +14,34 @@ const initialState = {
         {name: "Television and video home studio set", status: true, usage: 2.3, cost: 1.4},
         {name: "Television", status: true, usage: 2.3, cost: 1.4},
         {name: "Television", status: true, usage: 2.3, cost: 1.4}
-    ]
+    ],
+    applianceUsage: [
+      ["Task", "Hours per Day"],
+      ["Laptop", 11],
+      ["Television", 2],
+      ["Bulbs", 2],
+      ["Refrigerator TV", 2],
+      ["Washer", 7],
+  ], 
+  usage: {Yearly: [
+    ["Year", "Sales", "Expenses"],
+    ["2013", 1000, 400],
+    ["2014", 1170, 460],
+    ["2015", 660, 1120],
+    ["2016", 1030, 540],
+  ], Monthly: [
+    ["Monthly", "Sales", "Expenses"],
+    ["Jan", 1000, 400],
+    ["Feb", 1170, 460],
+    ["Mar", 660, 1120],
+    ["Apr", 1030, 540],
+  ], Daily: [
+    ["Daily", "Sales", "Expenses"],
+    ["1", 1000, 400],
+    ["2", 1170, 460],
+    ["3", 660, 1120],
+    ["4", 1030, 540],
+  ]}
 }
 
 export const dashboard = createSlice({
@@ -38,12 +65,19 @@ export const dashboard = createSlice({
     },
     setApplianceStatus: (state, action) =>{
       state.applianceStatus = action.payload
+    },
+    setApplianceUsage: (state, action) =>{
+      state.applianceUsage = action.payload
+    },
+    setUsage: (state, action) =>{
+      state.usage = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setConsumption, setDefaultCurrency, setExchangeRate, setDashboardCurrency, setApplianceStatusColName, setApplianceStatus } = dashboard.actions
+export const { setConsumption, setDefaultCurrency, setExchangeRate, setDashboardCurrency, 
+  setApplianceStatusColName, setApplianceStatus, setApplianceUsage, setUsage } = dashboard.actions
 
 export default dashboard.reducer
 
