@@ -1,17 +1,16 @@
 "use client"
-import useAuthStateChange from "@/src/common/utils/hooks/authStateChange"
-import { createContext } from "react"
+import AuthorizeLayout from "@/src/common/authentication/component/authorizationLayout"
 
 type layout = {
     children: React.ReactNode
 }
-export const UserContext = createContext(null)
+
 const Layout = ({children} : layout) =>{
-    const {user} = useAuthStateChange()
     return(
-        <UserContext.Provider value={user}>
+        <AuthorizeLayout redirect="/app" reverse>
             {children}
-        </UserContext.Provider>
+        </AuthorizeLayout>
+            
     )
 }
 export default Layout
