@@ -2,11 +2,16 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   consumption: { 
-    today: {energy: 34.5, cost: 4.5, status: "High"},
-    yesterday: {energy: 31.5, cost: 4.3, status: "Moderate"},
-    total: {energy: 54.5, cost: 9.5, status: "Good"}},
+    Today: {energy: 34.5, cost: 4.5, status: "High"},
+    Yesterday: {energy: 31.5, cost: 4.3, status: "Moderate"},
+    Total: {energy: 54.5, cost: 9.5, status: "Good"}
+  },
     defaultCurrency: "USD",
-    exchangeRate: {NGN: {rate: 1600, symbol: "N"}, GBP: {rate: 1.28, symbol: "GBP"},  USD: {rate: 1, symbol: "$"}},
+    exchangeRate: {
+      NGN: {rate: 1600, symbol: "N"}, 
+      GBP: {rate: 1.28, symbol: "GBP"},  
+      USD: {rate: 1, symbol: "$"}
+    },
     dashboardCurrency: "USD",
     applianceStatusColName: ["Name", "Status", "Usage", "Cost"],
     applianceStatus: [
@@ -41,7 +46,12 @@ const initialState = {
     ["2", 1170, 460],
     ["3", 660, 1120],
     ["4", 1030, 540],
-  ]}
+  ]},
+  energy_plan: [
+    {name: "Day Plan", isActive: true}, 
+    {name: "Night Plan", isActive: false},
+    {name: "Daysaver", isActive: false},
+ ]
 }
 
 export const dashboard = createSlice({
@@ -71,13 +81,16 @@ export const dashboard = createSlice({
     },
     setUsage: (state, action) =>{
       state.usage = action.payload
+    },
+    setEnergyPlan: (state, action) =>{
+      state.energy_plan = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
 export const { setConsumption, setDefaultCurrency, setExchangeRate, setDashboardCurrency, 
-  setApplianceStatusColName, setApplianceStatus, setApplianceUsage, setUsage } = dashboard.actions
+  setApplianceStatusColName, setApplianceStatus, setApplianceUsage, setUsage, setEnergyPlan } = dashboard.actions
 
 export default dashboard.reducer
 
