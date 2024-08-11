@@ -4,7 +4,7 @@ import { auth } from "../firebase/config";
 import { error } from "console";
 
 //all firebase auth functions are async functions
-class FirebaseDB implements gazeAuth {
+class FirebaseAuth implements gazeAuth {
     createUser = async (email: string, password: string) => {
         let result: {user: string | null, error: string | null} = {user:null, error:null}
         await createUserWithEmailAndPassword(auth, email, password)
@@ -54,4 +54,4 @@ class FirebaseDB implements gazeAuth {
     
 }
 
-export default FirebaseDB
+export default FirebaseAuth

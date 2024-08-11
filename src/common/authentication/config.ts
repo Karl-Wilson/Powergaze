@@ -13,17 +13,17 @@ export interface gazeAuth {
 
 ///strategy design pattern
 
-class DBConfig {
-    db!: gazeAuth;
+class AuthConfig {
+    auth!: gazeAuth;
 
-    setDB(db:gazeAuth){
-        this.db = db
+    setAuth(auth:gazeAuth){
+        this.auth = auth
     }
 
-    getDB():gazeAuth{
-        return this.db;
+    getAuth():gazeAuth{
+        return this.auth;
     }
 
 }
 
-export default DBConfig
+export default AuthConfig

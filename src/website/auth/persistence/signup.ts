@@ -1,10 +1,10 @@
 import { useState } from "react"
-import DATABASE from "@/src/common/authentication/initialize"
+import AUTH from "@/src/common/authentication/initialize"
 
 const useSignup = () =>{
     const [error, setError] = useState<any>()
     async function testSubmit (email: string, password: string){
-        let result = await DATABASE.createUser(email, password)
+        let result = await AUTH.createUser(email, password)
         return result
     }
     const submit = (e: React.SyntheticEvent) => {

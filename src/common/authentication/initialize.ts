@@ -1,11 +1,11 @@
-import FirebaseDB from "./firebase";
-import DBConfig from "./config";
+import FirebaseAuth from "./firebase";
+import AuthConfig from "./config";
 
 
-const initFirebaseDB = new DBConfig()
-initFirebaseDB.setDB(new FirebaseDB())
+const initAuth = new AuthConfig()
+initAuth.setAuth(new FirebaseAuth())
 //init another database like mongoDB etc
 
-const DATABASE = initFirebaseDB.getDB();
+const AUTH = initAuth.getAuth();
 
-export default DATABASE;
+export default AUTH;
