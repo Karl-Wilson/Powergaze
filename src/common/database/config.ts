@@ -1,16 +1,17 @@
 export type DB = {
-    setConsumption?: (userid: string, data: any)=> void
-    setStatus?: (userid: string, data: any)=> void
-    setTarrif?:  (userid: string, data: any)=>void
-    setUserAppliances?: (userid: string, data: any) => void
-    setEnergyPlan?: (userid: string, data: any)=>void
-    setUserLog?: (userid: string, data: any)=>void
-    getConsumption?: (userId: string)=> void
-    getStatus?: (userId: string)=> void
-    getTarrif?:  (userId: string)=>void
-    getUserAppliances?: (userId: string) => void
-    getEnergyPlan?: (userId: string)=>void
-    getUserLog?: (userid: string)=>void
+    setConsumption?: (userid: string, data: any)=> Promise<any>
+    setStatus?: (userid: string, data: any)=> Promise<any>
+    setTarrif?:  (userid: string, data: any)=>Promise<any>
+    setUserAppliances?: (userid: string, data: any) => Promise<any>
+    setEnergyPlan?: (userid: string, data: any)=>Promise<any>
+    setUserLog?: (userid: string, data: any)=>Promise<any>
+    getConsumption?: (userId: string)=> Promise<any>
+    getStatus?: (userId: string)=> Promise<any>
+    getTarrif?:  (userId: string)=>Promise<any>
+    getUserAppliances?: (userId: string) => Promise<any[]>
+    getEnergyPlan?: (userId: string)=>Promise<any>
+    getUserLog?: (userid: string)=>Promise<any>
+    updateConsumption?: (userid: string, updateDoc: string, data:any)=>Promise<void>
 
 }
 

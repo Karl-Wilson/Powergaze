@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, query, updateDoc, where } from "firebase/firestore";
 import { DB } from "./config";
 import { db } from "../firebase/config";
 
@@ -47,136 +47,87 @@ const addDocument = async (db:any, database:string, userId:string, subCollection
 class FirebaseDB implements DB {
     getConsumption = async (userId: string) =>{
         try{
-            getSubCollectionDocs(db, "user", userId, "consumption").then((result)=>{
-                console.log(result)
-            }).catch((error)=>{
-                throw error
-            })
+           return await getSubCollectionDocs(db, "user", userId, "consumption")
         }catch(error){
-            console.error(error)
-        }   
+            throw error
+        }  
     }
     getStatus = async(userId: string) =>{
         try{
-            getSubCollectionDocs(db, "user", userId, "appliance_status").then((result)=>{
-                console.log(result)
-            }).catch((error)=>{
-                throw error
-            })
+            return await getSubCollectionDocs(db, "user", userId, "appliance_status")
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
     getTarrif = async (userId: string) =>{
         try{
-            getSubCollectionDocs(db, "user", userId, "user_tarriff").then((result)=>{
-                console.log(result)
-            }).catch((error)=>{
-                throw error
-            })
+            return await getSubCollectionDocs(db, "user", userId, "user_tariff")
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
     getEnergyPlan = async (userId: string) => {
         try{
-            getSubCollectionDocs(db, "user", userId, "energy_plan").then((result)=>{
-                console.log(result)
-            }).catch((error)=>{
-                throw error
-            })
+            return await getSubCollectionDocs(db, "user", userId, "energy_plan")
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
     getUserAppliances = async (userId: string) =>{
         try{
-            getSubCollectionDocs(db, "user", userId, "user_appliances").then((result)=>{
-                console.log(result)
-            }).catch((error)=>{
-                throw error
-            })
-
+            return await getSubCollectionDocs(db, "user", userId, "user_appliances")
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
     getUserLog = async (userId: string) =>{
         try{
-            getSubCollectionDocs(db, "user", userId, "user_log").then((result)=>{
-                console.log(result)
-            }).catch((error)=>{
-                throw error
-            })
+            return await getSubCollectionDocs(db, "user", userId, "user_log")
+        }catch(error){
+            console.error(error)
+        }
+    }
 
+    setConsumption = async (userid: string, data: {date: string, app_id:string, usage: number}) =>{
+        try{
+            return await addDocument(db, "user", userid, "consumption", data)
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
-    setConsumption = (userid: string, data: {date: string, app_id:string, usage: number}) =>{
+    setStatus = async (userid: string, data: {date: string, app_id:string, status: boolean}) =>{
         try{
-            addDocument(db, "user", userid, "consumption", data).then((data)=>{
-                console.log((data))
-            }).catch((error)=>{
-                throw error
-            })
+            return await addDocument(db, "user", userid, "appliance_status", data)
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
-    setStatus = (userid: string, data: {date: string, app_id:string, status: boolean, time: string}) =>{
+    setTarrif = async (userid: string, data: {date: string, tarriff:string}) =>{
         try{
-            addDocument(db, "user", userid, "appliance_status", data).then((data)=>{
-                console.log((data))
-            }).catch((error)=>{
-                throw error
-            })
+            return await addDocument(db, "user", userid, "user_tariff", data)
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
-    setTarrif = (userid: string, data: {date: string, tarriff:string}) =>{
+    setUserAppliances = async (userid: string, data: {date: string, app_id:string, cat_id: string}) =>{
         try{
-            addDocument(db, "user", userid, "user_tarriff", data).then((data)=>{
-                console.log((data))
-            }).catch((error)=>{
-                throw error
-            })
+            return await addDocument(db, "user", userid, "user_appliances", data)
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
-    setUserAppliances = (userid: string, data: {date: string, app_id:string, cat_id: string}) =>{
+    setEnergyPlan = async (userid: string, data: {date: string, name:string, action: string, unit: string, cost: number, isActive: boolean}) =>{
         try{
-            addDocument(db, "user", userid, "user_appliances", data).then((data)=>{
-                console.log((data))
-            }).catch((error)=>{
-                throw error
-            })
+            return await addDocument(db, "user", userid, "energy_plan", data)
         }catch(error){
-            console.error(error)
+            throw error
         }
     }
-    setEnergyPlan = (userid: string, data: {date: string, name:string, action: string, unit: string, cost: number, isActive: boolean}) =>{
+    setUserLog = async (userid: string, data: {date: string, action: string, time: string}) =>{
         try{
-            addDocument(db, "user", userid, "energy_plan", data).then((data)=>{
-                console.log((data))
-            }).catch((error)=>{
-                throw error
-            })
+            return await addDocument(db, "user", userid, "user_log", data)
         }catch(error){
-            console.error(error)
-        }
-    }
-    setUserLog = (userid: string, data: {date: string, action: string, time: string}) =>{
-        try{
-            addDocument(db, "user", userid, "user_log", data).then((data)=>{
-                console.log((data))
-            }).catch((error)=>{
-                throw error
-            })
-        }catch(error){
-            console.error(error)
+            throw error
         }
     }
 }
