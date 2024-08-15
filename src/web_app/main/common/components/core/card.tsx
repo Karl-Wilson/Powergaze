@@ -12,7 +12,7 @@ type header = {
     title: string
     children?: React.ReactNode
     class?: string
-    isLoading: boolean
+    isLoading?: boolean
 }
 type body = {
     children: React.ReactNode
