@@ -6,13 +6,13 @@ import { NextResponse } from "next/server"
 export async function POST(request: Request) {
     //check for user id
     let result:DocumentData
-    let tariff:DocumentData
+
     try{
         const content = await request.json()
            result = await getOneDoc(db, "test", "usage_by_category")
            let keys = Object.keys(result)
            let newResult: any[] = []
-           console.log(result)
+
            keys.map(item=>{
             let arrayData = []
             arrayData.push(item)
