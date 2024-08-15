@@ -28,25 +28,7 @@ const initialState = {
       ["Refrigerator TV", 2],
       ["Washer", 7],
   ], 
-  usage: {Yearly: [
-    ["Year", "Sales", "Expenses"],
-    ["2013", 1000, 400],
-    ["2014", 1170, 460],
-    ["2015", 660, 1120],
-    ["2016", 1030, 540],
-  ], Monthly: [
-    ["Monthly", "Sales", "Expenses"],
-    ["Jan", 1000, 400],
-    ["Feb", 1170, 460],
-    ["Mar", 660, 1120],
-    ["Apr", 1030, 540],
-  ], Daily: [
-    ["Daily", "Sales", "Expenses"],
-    ["1", 1000, 400],
-    ["2", 1170, 460],
-    ["3", 660, 1120],
-    ["4", 1030, 540],
-  ]},
+  usage: {},
   energy_plan: [
     {name: "Day Plan", isActive: true}, 
     {name: "Night Plan", isActive: false},
