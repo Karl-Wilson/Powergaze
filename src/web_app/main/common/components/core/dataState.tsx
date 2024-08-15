@@ -5,12 +5,16 @@ type dataState ={
 const DataState = (props: dataState) =>{
     const isDataAvailable = () =>{
         if(typeof props.data == "object"){
+            if(props.data == null){
+                return false
+            }
             if(Array.isArray(props.data)){
                 if(props.data.length > 0){
                     return true
                 }
             }
             if(Object.values(props.data).length > 0){
+                
                 return true
             }
             return false
