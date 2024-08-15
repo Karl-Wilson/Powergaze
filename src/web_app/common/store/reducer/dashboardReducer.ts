@@ -14,12 +14,7 @@ const initialState = {
     },
     dashboardCurrency: "USD",
     applianceStatusColName: ["Name", "Status", "Usage", "Cost"],
-    applianceStatus: [
-        {name: "Refrigerator", status: true, usage: 2.3, cost: 1.4},
-        {name: "Television and video home studio set", status: true, usage: 2.3, cost: 1.4},
-        {name: "Television", status: true, usage: 2.3, cost: 1.4},
-        {name: "Television", status: true, usage: 2.3, cost: 1.4}
-    ],
+    applianceStatus: [],
     applianceUsage: [], 
   usage: {},
   energy_plan: [
