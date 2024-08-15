@@ -20,14 +20,7 @@ const initialState = {
         {name: "Television", status: true, usage: 2.3, cost: 1.4},
         {name: "Television", status: true, usage: 2.3, cost: 1.4}
     ],
-    applianceUsage: [
-      ["Task", "Hours per Day"],
-      ["Laptop", 11],
-      ["Television", 2],
-      ["Bulbs", 2],
-      ["Refrigerator TV", 2],
-      ["Washer", 7],
-  ], 
+    applianceUsage: [], 
   usage: {},
   energy_plan: [
     {name: "Day Plan", isActive: true}, 
