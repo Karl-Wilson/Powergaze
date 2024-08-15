@@ -1,10 +1,10 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const initialState = {
   consumption: { 
-    Today: {energy: 34.5, cost: 4.5, status: "High"},
-    Yesterday: {energy: 31.5, cost: 4.3, status: "Moderate"},
-    Total: {energy: 54.5, cost: 9.5, status: "Good"}
+    Today: {},
+    Yesterday: {},
+    Total: {}
   },
     defaultCurrency: "USD",
     exchangeRate: {
