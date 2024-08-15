@@ -2,7 +2,7 @@ import { addDoc, collection, doc, getDoc, getDocs, query, updateDoc, where } fro
 import { DB } from "./config";
 import { db } from "../firebase/config";
 
-const getOneDoc = async (db:any, database: string, document: string) =>{
+export const getOneDoc = async (db:any, database: string, document: string) =>{
         const docRef = doc(db, database, document);
         const docSnap = await getDoc(docRef);
 
