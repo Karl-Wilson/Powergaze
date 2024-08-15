@@ -3,10 +3,11 @@ import { Row, TBody, Col, THead } from "../core/myTable"
 import { StatusComp } from "../core/components"
 
 type tableBody = {
-    list: {name: string, status: boolean, usage: number, cost: number}[]
+    list: {name: string, status: boolean, usage: number, cost: number}[] | []
 }
 export const TableBody = (props: tableBody) =>{
     const {converter, exchangeRate, dashboardCurrency} = useCurrencyConverter()
+
     return(
         <TBody classes="max-h-48 overflow-auto">
             {props.list.map(item=>{
