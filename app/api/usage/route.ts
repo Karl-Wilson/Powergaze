@@ -32,7 +32,7 @@ export async function POST(request: Request) {
                     ree.push(data[dataLabel])
                     ree.push(data.usage)
                     let cost  = data.usage * tariff["uk"]
-                    ree.push(parseFloat(cost.toFixed(2),))
+                    ree.push(parseFloat(cost.toFixed(2)))
                     converted.push(ree)
                 })
                 //then replace the original value with the new value and add data labels at the beginning of the array
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
                 // final data structure
                 //result: {Daily:[day,usage,cost][], Monthly:[month,usage,cost][], Yearly:[year,usage,cost][] }
            })
-    
+
            return NextResponse.json({data: result, error: null}, {status: 200})
     }catch(error){
         return NextResponse.json({data: null, error: error}, {status: 200})
