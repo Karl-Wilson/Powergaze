@@ -37,7 +37,7 @@ export async function POST(request: Request) {
                 })
                 //then replace the original value with the new value and add data labels at the beginning of the array
                 result[key] = converted
-                result[key].splice(0,1,[key, "Usage", "Cost"])
+                result[key].unshift([key, "Usage", "Cost"])
                 // final data structure
                 //result: {Daily:[day,usage,cost][], Monthly:[month,usage,cost][], Yearly:[year,usage,cost][] }
            })
