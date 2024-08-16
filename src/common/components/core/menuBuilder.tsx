@@ -34,7 +34,7 @@ type dropdown = {
 
 export const MenuDropdown = (props: dropdown) =>{
     return(
-        <div className={classJoiner("absolute p-4 box-border drop-shadow-lg", props.display, props.class)}>
+        <div className={classJoiner("absolute box-border drop-shadow-lg", props.display, props.class)}>
             {props.children}
         </div>
     )
