@@ -39,14 +39,17 @@ export function onscroll (element:HTMLElement, action:()=>void, visibility: bool
   export const currencyConverter = (finalCurrency: string, initialCurrency: string, initialAmount: number, fx: {[key: string]: {rate: number, symbol: string}}) =>{
     //rates should be initial currency conversion rates
     try {
-        let exchange = initialAmount;    
+        if(typeof initialAmount != "undefined"){
+            let exchange = initialAmount;    
             if(initialCurrency != finalCurrency){
                 //convert initial currency to dollars
                 //convert to final currency
                     exchange = (initialAmount/fx[initialCurrency].rate)* fx[finalCurrency].rate
             }
-
             return exchange.toFixed(2)
+        }
+        return
+        
     } catch (error) {
         console.log(error, ": currencyConverter function")
     }
