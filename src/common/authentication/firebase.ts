@@ -30,13 +30,9 @@ class FirebaseAuth implements gazeAuth {
         return result;
     }
     signOut = () =>{
-        let result = {isSignedOut: false, error: {}}
-        signOut(auth).then(() => {
-            result.isSignedOut = true
-          }).catch((error) => {
-            result.error = error
+        signOut(auth).catch((error) => {
+            console.log(error)
           });
-          return result
     }
     isUserSignedIn = () =>{
         let result = false

@@ -7,7 +7,7 @@ export interface gazeAuth {
     setUserEmail?: ()=>void
     setUserPassword?: ()=>void
     signIn: (email: string, password: string)=> Promise<{user: string | null, error: string | null}>
-    signOut: () => {isSignedOut: boolean, error: object};
+    signOut: () => void
     isUserSignedIn: ()=> void
 }
 
