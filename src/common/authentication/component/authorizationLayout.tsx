@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation"
 import useAuthStateChange from "../../utils/hooks/authStateChange"
+import Loading from "../../components/core/loading"
 
 type layout = {
     children: React.ReactNode
@@ -11,26 +12,26 @@ const AuthorizeLayout = (props:layout) =>{
     const router = useRouter()
 
     if(!props.reverse){
-        //default: if user is signed in show content
+        //default: if user is signed in show content, //dasboard
         if(user){
             return  <>{props.children}</> 
         }else if(user == false){
             //redirect
             router.push(props.redirect)
-            return <div>Loading inside</div>
+            return <Loading/>
         }
     }else{
-        //if user is logged in redirect to another page
+        //if user is logged in redirect to another page, //e.g login page
         if(user){
              //redirect
             router.push(props.redirect)
-            return <div>Loading inside</div>
+            return <Loading/>
         }else if(user == false){
             return  <>{props.children}</>
         }
     }
     
-    return <div>Loading outside</div>
+    return <Loading/>
 }
 
 export default AuthorizeLayout
