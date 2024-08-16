@@ -17,11 +17,7 @@ const initialState = {
     applianceStatus: [],
     applianceUsage: [], 
   usage: {},
-  energy_plan: [
-    {name: "Day Plan", isActive: true}, 
-    {name: "Night Plan", isActive: false},
-    {name: "Daysaver", isActive: false},
- ]
+  energy_plan: []
 }
 
 export const dashboard = createSlice({
