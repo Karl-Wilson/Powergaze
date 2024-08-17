@@ -24,7 +24,6 @@ const ConsumptionLayout = (props: layout) =>{
     }, [consumptionData])
 
     const click = (label:string) =>{
-        throw "error"
         setLabelClicked(label)
         if(label == tabs[0]){
             setData(consumptionData.Today)
