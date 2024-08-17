@@ -11,7 +11,7 @@ type usage = {
 }
 const ApplianceUsage = (props: usage) =>{
     let data: any[] = useSelector((state: RootState)=>state.dashboard.applianceUsage)
-    const {isLoading} = useLoadData("/api/categoryUsage", setApplianceUsage)
+    const {isLoading} = useLoadData("/api/categoryUsage", setApplianceUsage, data)
     return(
         <DashboardCard class={props.class}>
             <CardHeader title="Appliance Usage" isLoading={isLoading}/>

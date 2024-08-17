@@ -14,7 +14,7 @@ type layout = {
 }
 const ApplianceLayout = (props: layout) =>{
     const data = useSelector((state:RootState)=>state.dashboard.applianceStatus)
-    const {isLoading} = useLoadData("/api/applianceStatus", setApplianceStatus)
+    const {isLoading} = useLoadData("/api/applianceStatus", setApplianceStatus, data)
 
     return(
         <DashboardCard class={props.class}>

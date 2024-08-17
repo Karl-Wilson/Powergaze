@@ -14,7 +14,7 @@ type status = {
 const ApplianceStatus = (props:status) =>{
     const columns = useSelector((state: RootState)=>state.dashboard.applianceStatusColName)
     const data = useSelector((state:RootState)=>state.dashboard.applianceStatus)
-    const {isLoading} = useLoadData("/api/applianceStatus", setApplianceStatus)
+    const {isLoading} = useLoadData("/api/applianceStatus", setApplianceStatus, data)
     return(
         <DashboardCard class={classJoiner(props.class)}>
             <CardHeader title="Appliance Usage" isLoading={isLoading}/>

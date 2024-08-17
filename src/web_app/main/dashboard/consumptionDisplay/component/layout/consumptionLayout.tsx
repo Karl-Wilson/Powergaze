@@ -18,7 +18,7 @@ const ConsumptionLayout = (props: layout) =>{
     let tabs = ["Today", "Yesterday", "Total"]
     let [labelClicked, setLabelClicked] = useState(tabs[0])
     let [data, setData] = useState(consumptionData[labelClicked as keyof typeof consumptionData])
-    let {isLoading} = useLoadData("/api/consumption", setConsumption)
+    let {isLoading} = useLoadData("/api/consumption", setConsumption, data)
     useEffect(()=>{
         setData(consumptionData.Today)
     }, [consumptionData])

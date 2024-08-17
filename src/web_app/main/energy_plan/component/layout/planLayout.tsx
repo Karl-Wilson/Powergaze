@@ -12,7 +12,7 @@ type layout = {
 
 const PlanLayout = (props:layout) =>{
     let data:[] | {name?: string, isActive?: boolean}[] = useSelector((state: RootState)=>state.dashboard.energy_plan)
-    let {isLoading} = useLoadData("/api/plan", setEnergyPlan)
+    let {isLoading} = useLoadData("/api/plan", setEnergyPlan, data)
     return(
         <div className={classJoiner(props.class, "grid grid-cols-1 md:grid-cols-3 gap-6")}>
             {isLoading && <p>Loading...</p>}
