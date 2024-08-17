@@ -17,7 +17,12 @@ const initialState = {
     applianceStatus: [],
     applianceUsage: [], 
   usage: {},
-  energy_plan: []
+  energy_plan: [],
+  notification: [
+    {message: "New feature added", date: "Today"},
+    {message: "Changes made", date: "Yesterday"},
+
+]
 }
 
 export const dashboard = createSlice({
@@ -50,13 +55,17 @@ export const dashboard = createSlice({
     },
     setEnergyPlan: (state, action) =>{
       state.energy_plan = action.payload
+    },
+    setNotification: (state, action) =>{
+      state.notification = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
 export const { setConsumption, setDefaultCurrency, setExchangeRate, setDashboardCurrency, 
-  setApplianceStatusColName, setApplianceStatus, setApplianceUsage, setUsage, setEnergyPlan } = dashboard.actions
+  setApplianceStatusColName, setApplianceStatus, setApplianceUsage, setUsage, setEnergyPlan,
+setNotification } = dashboard.actions
 
 export default dashboard.reducer
 
