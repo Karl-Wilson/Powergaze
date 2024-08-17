@@ -1,4 +1,4 @@
-
+"use client"
 import SignupLayout from "../component/layout/signupLayout"
 import AuthSectionWrapper from "../component/core/sectionWrapper"
 
