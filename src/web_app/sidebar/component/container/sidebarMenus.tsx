@@ -30,7 +30,7 @@ const SidebarMenus = (props: sidebarMenus) =>{
 
     return(
         <div className={classJoiner("overflow-auto h-[calc(100vh-80px)] box-border transition-all py-6 md:px-3", isMenuVisible? "px-3":"px-0")}>
-            <div className={classJoiner("flex flex-col h-[2000px]", props.class)}>
+            <div className={classJoiner("flex flex-col", props.class)}>
                 {menus.map(menu=>{
                     if(pathname == menu.url){
                     return <SidebarMenu title={menu.name} icon={menu.icon} 
