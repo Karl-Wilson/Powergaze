@@ -1,10 +1,11 @@
 "use client"
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { classJoiner } from "../../utils/helper";
 
-type switchType = {
+export type switchType = {
     bgColor: string
     action: ()=>void
+    isActive?: boolean
 }
 
 const Switch = (props: switchType) =>{
@@ -13,7 +14,8 @@ const Switch = (props: switchType) =>{
     let wrapperColor = "bg-gray-200"
     let ballColor = "bg-gray-500"
 
-    const click = () =>{
+    
+    const toggle = () =>{
         let switchBall = ball.current! as HTMLElement
         let switchWrapper = wrapper.current! as HTMLElement
 
@@ -27,12 +29,15 @@ const Switch = (props: switchType) =>{
         //wrapper color
         switchWrapper.classList.toggle(props.bgColor)
         switchWrapper.classList.toggle(wrapperColor)
-
+    }
+    
+    const click = () =>{
+        toggle()
         props.action();
     }
     return(
-        <div ref={wrapper} className={classJoiner("h-8 w-14 transition-all ease-in-out duration-300 rounded-full box-border flex flex-row items-center cursor-pointer", wrapperColor)} onClick={click}>
-            <div ref={ball} className={classJoiner("size-5 transition-all ease-in-out duration-300 mx-1 box-border rounded-full left-0 relative cursor-pointer", ballColor)}></div>
+        <div ref={wrapper} className={classJoiner("h-8 w-14 transition-all ease-in-out duration-300 rounded-full box-border flex flex-row items-center cursor-pointer", props.isActive? props.bgColor : wrapperColor)} onClick={click}>
+            <div ref={ball} className={classJoiner("transition-all ease-in-out duration-300 mx-1 box-border rounded-full relative cursor-pointer", props.isActive? "left-6 size-6 bg-white" : `left-0 size-5 ${ballColor}`)}></div>
         </div>
     )
 }
