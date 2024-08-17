@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react"
 import { classJoiner } from "../../utils/helper"
 import useMenu from "../../utils/hooks/menu"
 
@@ -16,11 +17,12 @@ export const MenuWrapper = (props: wrapper) =>{
 type contentWrapper = {
     children: React.ReactNode
     class?: string
+    click?: MouseEventHandler
 }
 
 export const MenuContentWrapper = (props: contentWrapper) =>{
     return(
-        <div className={classJoiner(props.class)}>
+        <div className={classJoiner(props.class)} onClick={props.click}>
             {props.children}
         </div>
     )
