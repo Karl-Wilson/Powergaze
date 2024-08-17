@@ -1,35 +1,39 @@
 type dataState ={
     children: React.ReactNode
-    data: {} | any[] | string | number | undefined
+    data: any
 }
-const DataState = (props: dataState) =>{
-    const isDataAvailable = () =>{
-        if(typeof props.data == "object"){
-            if(props.data == null){
+export const isDataAvailable = (data: any) =>{
+    try{
+        if(typeof data == "object"){
+            if(data == null){
                 return false
             }
-            if(Array.isArray(props.data)){
-                if(props.data.length > 0){
+            if(Array.isArray(data)){
+                if(data.length > 0){
                     return true
                 }
             }
-            if(Object.values(props.data).length > 0){
+            if(Object.values(data).length > 0){
                 
                 return true
             }
             return false
             
-        }else if(props.data){
+        }else if(data){
             return true
         }
-
+    
         return false
+    }catch(error){
+        throw error
     }
+}
 
-    return(
+const DataState = (props: dataState) =>{
+       return(
         <>
-           {isDataAvailable() && <>{props.children}</>}
-           {!isDataAvailable() && <p>Data not available</p>}
+           {isDataAvailable(props.data) && <>{props.children}</>}
+           {!isDataAvailable(props.data) && <p>Data not available</p>}
         </>
     )
 }
