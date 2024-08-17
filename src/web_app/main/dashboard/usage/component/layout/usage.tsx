@@ -16,7 +16,7 @@ const Usage = (props: usage) =>{
     let dataMain = useSelector((state: RootState)=>state.dashboard.usage)
     let options = ["Yearly", "Monthly", "Daily"]
     let {change, data, selection} = useCardSelection(dataMain, options)
-    let {isLoading} = useLoadData("/api/usage", setUsage)
+    let {isLoading} = useLoadData("/api/usage", setUsage, data)
     
 
       
