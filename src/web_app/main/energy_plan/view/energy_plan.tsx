@@ -4,6 +4,7 @@ import GridWrapper from "../../common/components/core/gridWrapper"
 import CreatePlanLayout from "../component/layout/createPlanLayout"
 import PlanLayout from "../component/layout/planLayout"
 import Settings from "../../settings/view/settings"
+import { PlanBoundry } from "../../common/components/errorboundary"
 
 const EnergyPlan =( ) =>{
     const {isCreatePlan, setCreatePlanVisibility} = useCreatePlan()
@@ -15,7 +16,8 @@ const EnergyPlan =( ) =>{
         <>
             <GridWrapper>
                 <CreatePlanLayout class="row-start-1 col-start-1 col-span-4 md:col-span-12"/>
-                <PlanLayout class="row-start-2 col-start-1 col-span-4 md:col-span-12"/>
+                <PlanBoundry class="row-start-2 col-start-1 col-span-4 md:col-span-12"><PlanLayout class="row-start-2 col-start-1 col-span-4 md:col-span-12"/></PlanBoundry>
+                
             </GridWrapper> 
             {isCreatePlan && <Settings title="Create Plan" submit={click} submitLabel="Create" closeBtn={()=>setCreatePlanVisibility(false)}/>}
             {isUpdatePlan && <Settings title="Update" submit={click} submitLabel="Update" closeBtn={()=>setUpdatePlanVisibility(false)}/>}
