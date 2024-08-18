@@ -14,8 +14,8 @@ type consumption = {
 const ConsumptionDisplay = (props:consumption) =>{
     return(
         <div className={classJoiner("rounded-xl py-3 px-6 relative text-white flex flex-col", props.class, lato.className)}>
-            <div className={classJoiner("text-xl z-20")}>{props.title}</div>
-            <div className="flex flex-row items-center z-20 h-full w-full absolute top-0 left-0 py-3 px-6 box-border">
+            <div className={classJoiner("text-xl z-10")}>{props.title}</div>
+            <div className="flex flex-row items-center z-10 h-full w-full absolute top-0 left-0 py-3 px-6 box-border">
                 <DataState data={props.value}>
                 <div className="flex flex-row items-end font-bold break-words">
                     <span className={classJoiner("text-4xl", props.valueClass)}>{props.value}</span>
