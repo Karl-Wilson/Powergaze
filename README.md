@@ -1,4 +1,4 @@
-# Agadi Web App
+# PowerGaze
 > This app offers a real-time dashboard for users to monitor energy usage and remotely control connected devices to enhance energy efficiency.
 
 > Live url - [powergaze.vercel.app](powergaze.vercel.app)
