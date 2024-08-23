@@ -1,7 +1,7 @@
 # PowerGaze
 > This app offers a real-time dashboard for users to monitor energy usage and remotely control connected devices to enhance energy efficiency.
 
-> Live url - [powergaze.vercel.app](https://www.powergaze.vercel.app)
+> Live url - [powergaze.vercel.app](www.powergaze.vercel.app)
 
 ## General Information
 In today's world, the need for energy conservation is more pressing than ever, both for environmental sustainability and cost savings. However, many individuals find it challenging to effectively monitor and manage their energy usage. Traditional methods often lack the ability to provide real-time data and actionable insights, making it difficult for users to identify inefficient patterns, optimize their consumption, and control energy-related devices remotely. This disconnect hinders efforts to achieve greater energy efficiency in both residential and commercial settings.
