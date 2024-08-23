@@ -53,6 +53,7 @@ Features to be added:
 - Analytics Page
 - Threshold Notifications
 - Creating of energy plan
+- Reset Password
 
 ## Acknowledgements
 - Many thanks to - God almighty, To my parents - Barr. Eng. Polycarp and Ebele Okose.
@@ -61,4 +62,5 @@ Features to be added:
 Created by Okose Chidelu Karl
 - Email: okosechidelu@gmail.com
 - Instagram: [@developerkarl](https://www.instagram.com/developerkarl)
+- Linkedin: [chidelu okose](https://www.linkedin.com/in/chidelu-okose/)
 
