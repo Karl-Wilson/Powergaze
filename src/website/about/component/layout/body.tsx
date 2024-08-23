@@ -3,7 +3,7 @@ import BodyHeader from "../container/bodyHeader"
 
 const Body = ()=>{
     return(
-        <div className="w-full">
+        <div className="w-full mt-4">
             <BodyHeader/>
             <BodyContent/>
         </div>

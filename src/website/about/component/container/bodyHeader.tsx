@@ -3,8 +3,8 @@ import { classJoiner } from "@/src/common/utils/helper"
 
 const BodyHeader = () =>{
     return(
-        <div>
-            <h2 className={classJoiner("font-bold text-xl mb-3", lato.className)}>About</h2>
+        <div className="md:w-3/4 mx-auto ">
+            <h2 className={classJoiner("font-black text-2xl mb-5", lato.className)}>About</h2>
         </div>
     )
 }
