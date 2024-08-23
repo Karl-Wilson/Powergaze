@@ -34,8 +34,8 @@ To address this challenge, I developed the PowerGaze web application, a practica
 - Set energy consumption thresholds and receive alerts.
 
 ## Screenshot
-![](./public/images/powergaze.png)
-![](./public/images/powergaze2.png)
+![](/public/powergaze.png)
+![](/public/powergaze2.png)
 
 ## Usage
 Test Login Details:
