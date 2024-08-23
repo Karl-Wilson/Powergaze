@@ -10,7 +10,7 @@ const BodyContent = () =>{
     return(
         <div className="md:w-3/4 mx-auto">
             <Paragraph class="pb-4">
-            In today's world, the need for energy conservation is more pressing than ever, 
+            In today&#39;s world, the need for energy conservation is more pressing than ever, 
             both for environmental sustainability and cost savings. However, many individuals 
             find it challenging to effectively monitor and manage their energy usage. Traditional 
             methods often lack the ability to provide real-time data and actionable insights, making 
