@@ -39,8 +39,8 @@ To address this challenge, I developed the PowerGaze web application, a practica
 
 ## Usage
 Test Login Details:
-- Email: emekajohn@test.com
-- Password: emekatest1234
+- Email: johndoe@test.com
+- Password: johntest1234
 
 ## Project Status
 Project is: complete
@@ -52,6 +52,7 @@ Rooms for improvement:
 Features to be added:
 - Analytics Page
 - Threshold Notifications
+- Creating of energy plan
 
 ## Acknowledgements
 - Many thanks to - God almighty, To my parents - Barr. Eng. Polycarp and Ebele Okose.
