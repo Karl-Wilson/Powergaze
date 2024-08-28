@@ -8,7 +8,7 @@ type menu = {
 }
 const Menu = (props:menu) =>{
     return(
-        <img src={props.icon} className={classJoiner("size-6 cursor-pointer", props.class)} onClick={props.click}/>
+        <img src={props.icon} className={classJoiner("size-8 cursor-pointer", props.class)} onClick={props.click}/>
     )
 }
 
