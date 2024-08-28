@@ -7,7 +7,7 @@ const useSidemenu = () =>{
     const dispatch = useDispatch()
     const isMenuVisibleRef = useRef(isMenuVisible)
     const click = () =>{
-        if(window.innerWidth<640){
+        if(window.innerWidth<768){
             if(isMenuVisible == true){
                 dispatch(setMenuVisibility(false))
                 isMenuVisibleRef.current = false
