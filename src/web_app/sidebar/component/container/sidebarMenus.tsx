@@ -13,7 +13,7 @@ type sidebarMenus = {
 const SidebarMenus = (props: sidebarMenus) =>{
     const dashboardPath = "/app"
     const pathname = usePathname()
-    const {isMenuVisible} = useSidemenu()
+    const {click, isMenuVisible} = useSidemenu()
 
     useEffect(() => {
    
@@ -35,11 +35,11 @@ const SidebarMenus = (props: sidebarMenus) =>{
                     if(pathname == menu.url){
                     return <SidebarMenu title={menu.name} icon={menu.icon} 
                         url={menu.url} active textClass={classJoiner(montserrat.className, "font-bold")} 
-                        key={menu.name+" - " +menu.url} class="mb-4"/> 
+                        key={menu.name+" - " +menu.url} class="mb-4" click={click}/> 
                     }
                     return <SidebarMenu title={menu.name} icon={menu.icon} 
                         url={menu.url} textClass={classJoiner(montserrat.className, "font-bold")} 
-                        key={menu.name+" - " +menu.url} class="mb-4"/> 
+                        key={menu.name+" - " +menu.url} class="mb-4" click={click}/> 
                 })}
             </div>
         </div>
