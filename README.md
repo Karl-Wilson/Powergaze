@@ -16,6 +16,7 @@ To address this challenge, I developed the PowerGaze web application, a practica
 - Next.js
 - Typescript
 - Tailwind
+- Firebase
 
 ## Dependencies
 - Firebase
