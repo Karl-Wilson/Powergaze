@@ -7,7 +7,7 @@ type dashboardView = {
 }
 const DashboardView = (props:dashboardView) =>{
     return(
-        <div className="max-w-[1700px] h-screen w-screen flex flex-row">
+        <div className="max-w-[1920px] 2xl:mx-auto h-screen w-screen flex flex-row">
             <Sidebar/>
             <div className="w-full h-screen flex flex-col">
                 <Navigation/>
